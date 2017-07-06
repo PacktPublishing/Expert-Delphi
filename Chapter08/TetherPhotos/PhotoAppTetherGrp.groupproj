@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{FBA5BA92-2E16-48A1-B5B1-C0E810155A07}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="PhotoTake\PhotoTake.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="PhotoDisplay\PhotoDisplay.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="PhotoTake">
+        <MSBuild Projects="PhotoTake\PhotoTake.dproj"/>
+    </Target>
+    <Target Name="PhotoTake:Clean">
+        <MSBuild Projects="PhotoTake\PhotoTake.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PhotoTake:Make">
+        <MSBuild Projects="PhotoTake\PhotoTake.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PhotoDisplay">
+        <MSBuild Projects="PhotoDisplay\PhotoDisplay.dproj"/>
+    </Target>
+    <Target Name="PhotoDisplay:Clean">
+        <MSBuild Projects="PhotoDisplay\PhotoDisplay.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PhotoDisplay:Make">
+        <MSBuild Projects="PhotoDisplay\PhotoDisplay.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="PhotoTake;PhotoDisplay"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="PhotoTake:Clean;PhotoDisplay:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="PhotoTake:Make;PhotoDisplay:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,135 @@
+object FormSensors: TFormSensors
+  Left = 0
+  Top = 0
+  Caption = 'Sensors'
+  ClientHeight = 480
+  ClientWidth = 345
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object chkbxLocSensor: TCheckBox
+    Align = Top
+    Margins.Left = 8.000000000000000000
+    Margins.Top = 8.000000000000000000
+    Margins.Right = 8.000000000000000000
+    Margins.Bottom = 8.000000000000000000
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 329.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Text = 'Location Sensor Active'
+    OnChange = chkbxLocSensorChange
+  end
+  object lblLocation: TLabel
+    Align = Top
+    Position.Y = 35.000000000000000000
+    Size.Width = 345.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    Text = '(Location)'
+    TabOrder = 9
+  end
+  object lblHeading: TLabel
+    Align = Top
+    Position.Y = 65.000000000000000000
+    Size.Width = 345.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    Text = '(Heading)'
+    TabOrder = 12
+  end
+  object chkbxMotion: TCheckBox
+    Align = Top
+    Margins.Left = 8.000000000000000000
+    Margins.Top = 8.000000000000000000
+    Margins.Right = 8.000000000000000000
+    Margins.Bottom = 8.000000000000000000
+    Position.X = 8.000000000000000000
+    Position.Y = 103.000000000000000000
+    Size.Width = 329.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Motion Sensor Active'
+    OnChange = chkbxMotionChange
+  end
+  object lblLinearAccel: TLabel
+    Align = Top
+    Position.Y = 130.000000000000000000
+    Size.Width = 345.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    Text = '(Linear Acceleration)'
+    TabOrder = 8
+  end
+  object lblAngleAccel: TLabel
+    Align = Top
+    Position.Y = 160.000000000000000000
+    Size.Width = 345.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    Text = '(Angular Acceleration)'
+    TabOrder = 7
+  end
+  object lblTilt: TLabel
+    Align = Top
+    Position.Y = 225.000000000000000000
+    Size.Width = 345.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    Text = '(Tilt)'
+    TabOrder = 6
+  end
+  object lblHeadingXYZ: TLabel
+    Align = Top
+    Position.Y = 255.000000000000000000
+    Size.Width = 345.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    Text = '(Heading)'
+    TabOrder = 5
+  end
+  object chkbxOrientation: TCheckBox
+    Align = Top
+    Margins.Left = 8.000000000000000000
+    Margins.Top = 8.000000000000000000
+    Margins.Right = 8.000000000000000000
+    Margins.Bottom = 8.000000000000000000
+    Position.X = 8.000000000000000000
+    Position.Y = 198.000000000000000000
+    Size.Width = 329.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Orientation Sensor Active'
+    OnChange = chkbxMotionChange
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 168
+    Top = 352
+  end
+  object LocationSensor1: TLocationSensor
+    OnLocationChanged = LocationSensor1LocationChanged
+    OnHeadingChanged = LocationSensor1HeadingChanged
+    Left = 248
+    Top = 376
+  end
+  object MotionSensor1: TMotionSensor
+    Left = 104
+    Top = 384
+  end
+  object OrientationSensor1: TOrientationSensor
+    Left = 56
+    Top = 344
+  end
+end

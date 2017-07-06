@@ -1,0 +1,175 @@
+object FormStats: TFormStats
+  Left = 0
+  Top = 0
+  Caption = 'INQ Stats'
+  ClientHeight = 480
+  ClientWidth = 464
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 2
+  object TabControl1: TTabControl
+    Align = Client
+    Size.Width = 464.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 0
+    TabOrder = 0
+    TabPosition = None
+    Sizes = (
+      464s
+      480s
+      464s
+      480s)
+    object tbiCountries: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 11.000000000000000000
+      Size.Height = 11.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'tbiCountries'
+      ExplicitSize.cx = 11.000000000000000000
+      ExplicitSize.cy = 11.000000000000000000
+      object ToolBar1: TToolBar
+        Size.Width = 464.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object edtCountryCodes: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 0
+          Text = 'pl,pt,nl'
+          Position.X = 168.000000000000000000
+          Position.Y = 8.000000000000000000
+        end
+        object Label1: TLabel
+          Position.X = 8.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 145.000000000000000000
+          Size.Height = 21.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Trailing
+          Text = 'Country codes:'
+          TabOrder = 1
+        end
+        object spdbtnRefresh: TSpeedButton
+          Align = Right
+          Position.X = 420.000000000000000000
+          Size.Width = 44.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'refreshtoolbutton'
+          Text = 'spdbtnRefresh'
+          OnClick = spdbtnRefreshClick
+        end
+      end
+      object lstvwCountries: TListView
+        ItemAppearanceClassName = 'TListItemAppearance'
+        ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+        HeaderAppearanceClassName = 'TListHeaderObjects'
+        FooterAppearanceClassName = 'TListHeaderObjects'
+        Align = Client
+        Size.Width = 464.000000000000000000
+        Size.Height = 436.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        OnItemClick = lstvwCountriesItemClick
+      end
+    end
+    object tbiPopulation: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 11.000000000000000000
+      Size.Height = 11.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'tbiPopulation'
+      ExplicitSize.cx = 11.000000000000000000
+      ExplicitSize.cy = 11.000000000000000000
+      object ToolBar2: TToolBar
+        Size.Width = 464.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object spdbtnBack: TSpeedButton
+          Action = ctaCountries
+          Align = Left
+          Enabled = True
+          ImageIndex = -1
+          Size.Width = 44.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'arrowlefttoolbutton'
+        end
+        object lblCountry: TLabel
+          Align = Client
+          Size.Width = 420.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+        end
+      end
+      object lstvwPopulation: TListView
+        ItemAppearanceClassName = 'TListItemRightDetailAppearance'
+        ItemEditAppearanceClassName = 'TListItemRightDetailDeleteAppearance'
+        HeaderAppearanceClassName = 'TListHeaderObjects'
+        FooterAppearanceClassName = 'TListHeaderObjects'
+        Align = Client
+        Size.Width = 464.000000000000000000
+        Size.Height = 436.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        ItemAppearanceObjects.ItemObjects.Accessory.Visible = False
+      end
+    end
+  end
+  object ActionList1: TActionList
+    Left = 264
+    Top = 224
+    object ctaCountries: TChangeTabAction
+      Category = 'Tab'
+      Tab = tbiCountries
+    end
+    object ctaPopulation: TChangeTabAction
+      Category = 'Tab'
+      Tab = tbiPopulation
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DMStats.FDMemTable1
+    ScopeMappings = <>
+    Left = 216
+    Top = 224
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 76
+    Top = 149
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'countryName'
+      Control = lstvwCountries
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkPropertyToFieldText: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'countryName'
+      Component = lblCountry
+      ComponentProperty = 'Text'
+    end
+  end
+end

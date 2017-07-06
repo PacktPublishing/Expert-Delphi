@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{E8D4CC76-C254-4279-B397-3073544462EF}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="resource\ToDoPckg.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="client\ToDoListEMS.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ToDoPckg">
+        <MSBuild Projects="resource\ToDoPckg.dproj"/>
+    </Target>
+    <Target Name="ToDoPckg:Clean">
+        <MSBuild Projects="resource\ToDoPckg.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ToDoPckg:Make">
+        <MSBuild Projects="resource\ToDoPckg.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ToDoListEMS">
+        <MSBuild Projects="client\ToDoListEMS.dproj"/>
+    </Target>
+    <Target Name="ToDoListEMS:Clean">
+        <MSBuild Projects="client\ToDoListEMS.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ToDoListEMS:Make">
+        <MSBuild Projects="client\ToDoListEMS.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ToDoPckg;ToDoListEMS"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ToDoPckg:Clean;ToDoListEMS:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ToDoPckg:Make;ToDoListEMS:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

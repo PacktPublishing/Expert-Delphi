@@ -1,0 +1,18 @@
+object FormVibrate: TFormVibrate
+  Left = 0
+  Top = 0
+  Caption = 'Vibrate'
+  ClientHeight = 506
+  ClientWidth = 279
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Button1: TButton
+    Position.X = 24.000000000000000000
+    Position.Y = 24.000000000000000000
+    TabOrder = 0
+    Text = 'Vibrate'
+    OnClick = Button1Click
+  end
+end

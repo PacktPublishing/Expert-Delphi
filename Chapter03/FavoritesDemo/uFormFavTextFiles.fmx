@@ -1,0 +1,71 @@
+object FormFavTextFiles: TFormFavTextFiles
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 588
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 2
+  object ToolBar1: TToolBar
+    Size.Width = 588.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object spdbtnBack: TSpeedButton
+      Align = Left
+      Size.Width = 44.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'arrowlefttoolbutton'
+      Text = 'spdbtnBack'
+      OnClick = spdbtnBackClick
+    end
+    object Label1: TLabel
+      Align = Client
+      Margins.Right = 44.000000000000000000
+      Size.Width = 500.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.HorzAlign = Center
+      Text = 'Text Files'
+    end
+  end
+  object btnWrite: TButton
+    Align = Top
+    Position.Y = 44.000000000000000000
+    Size.Width = 588.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Write with TStreamWriter'
+    OnClick = btnWriteClick
+  end
+  object btnRead: TButton
+    Align = Top
+    Position.Y = 88.000000000000000000
+    Size.Width = 588.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Read with TStreamReader'
+    OnClick = btnReadClick
+  end
+  object MemoLog: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Align = Client
+    Margins.Left = 4.000000000000000000
+    Margins.Top = 4.000000000000000000
+    Margins.Right = 4.000000000000000000
+    Margins.Bottom = 4.000000000000000000
+    Size.Width = 580.000000000000000000
+    Size.Height = 340.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Viewport.Width = 572.000000000000000000
+    Viewport.Height = 332.000000000000000000
+  end
+end

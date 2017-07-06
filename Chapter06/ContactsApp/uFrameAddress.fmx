@@ -1,0 +1,96 @@
+object FrameAddress: TFrameAddress
+  Size.Width = 208.000000000000000000
+  Size.Height = 184.000000000000000000
+  Size.PlatformDefault = False
+  object edtStreet: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Anchors = [akLeft, akTop, akRight]
+    TabOrder = 4
+    Position.X = 16.000000000000000000
+    Position.Y = 48.000000000000000000
+    Size.Width = 126.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    object lblStreet: TLabel
+      Position.Y = -19.000000000000000000
+      Text = 'Street'
+    end
+  end
+  object edtStreetNr: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Anchors = [akTop, akRight]
+    TabOrder = 0
+    Position.X = 149.000000000000000000
+    Position.Y = 48.000000000000000000
+    Size.Width = 49.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    object lblStreetNr: TLabel
+      Position.Y = -19.000000000000000000
+      Size.Width = 73.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Nr'
+    end
+  end
+  object edtCity: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Anchors = [akTop, akRight]
+    TabOrder = 3
+    Position.X = 104.000000000000000000
+    Position.Y = 96.000000000000000000
+    Size.Width = 94.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    object lblCity: TLabel
+      Position.Y = -19.000000000000000000
+      Text = 'City'
+    end
+  end
+  object lblAddressTitle: TLabel
+    Align = Top
+    StyledSettings = [Family, Size]
+    Margins.Left = 16.000000000000000000
+    Margins.Top = 4.000000000000000000
+    Margins.Right = 4.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 4.000000000000000000
+    Size.Width = 188.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    TextSettings.FontColor = claRed
+    Text = 'Address'
+  end
+  object edtCountry: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Anchors = [akLeft, akTop, akRight]
+    TabOrder = 1
+    Position.X = 16.000000000000000000
+    Position.Y = 144.000000000000000000
+    Size.Width = 182.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    object lblCountry: TLabel
+      Position.Y = -19.000000000000000000
+      Text = 'Country'
+    end
+  end
+  object edtZipCode: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Anchors = [akLeft, akTop, akRight]
+    TabOrder = 2
+    Position.X = 16.000000000000000000
+    Position.Y = 96.000000000000000000
+    Size.Width = 81.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    object lblZipCode: TLabel
+      Position.Y = -19.000000000000000000
+      Size.Width = 65.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Zip Code'
+    end
+  end
+end

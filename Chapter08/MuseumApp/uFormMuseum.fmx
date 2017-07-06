@@ -1,0 +1,63 @@
+object FormMuseum: TFormMuseum
+  Left = 0
+  Top = 0
+  Caption = 'Delphi Beacon Museum App'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 2
+  object ToolBar1: TToolBar
+    Size.Width = 640.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object chkbxActive: TCheckBox
+      Position.X = 8.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 257.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Museum Tour Started'
+      OnChange = chkbxActiveChange
+    end
+  end
+  object lblInfo: TLabel
+    Align = Top
+    Margins.Left = 4.000000000000000000
+    Margins.Top = 4.000000000000000000
+    Margins.Right = 4.000000000000000000
+    Margins.Bottom = 4.000000000000000000
+    Position.X = 4.000000000000000000
+    Position.Y = 48.000000000000000000
+    Size.Width = 632.000000000000000000
+    Size.Height = 37.000000000000000000
+    Size.PlatformDefault = False
+    Text = '(Information)'
+    TabOrder = 2
+  end
+  object WebBrowser1: TWebBrowser
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 391.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Beacon1: TBeacon
+    Mode = Standard
+    ModeExtended = [iBeacons, AltBeacons, Eddystones]
+    MonitorizedRegions = <
+      item
+        UUID = '{74278BDA-B644-4520-8F0C-720EAF059935}'
+        KindofBeacon = iBeacons
+        EddyNamespace = '00000000000000000000'
+        EddyInstance = '000000000000'
+        IDManufacturer = '004C'
+      end>
+    SPC = 0.500000000000000000
+    OnBeaconProximity = Beacon1BeaconProximity
+    Left = 64
+    Top = 128
+  end
+end

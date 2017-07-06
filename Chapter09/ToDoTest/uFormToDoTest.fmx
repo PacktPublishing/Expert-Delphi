@@ -1,0 +1,98 @@
+object FormToDoTest: TFormToDoTest
+  Left = 0
+  Top = 0
+  Caption = 'Form7'
+  ClientHeight = 480
+  ClientWidth = 356
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object lstvwToDos: TListView
+    ItemAppearanceClassName = 'TDynamicAppearance'
+    ItemEditAppearanceClassName = 'TDynamicAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    Align = Client
+    Size.Width = 356.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    ItemAppearance.ItemHeight = 64
+    ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+      item
+        AppearanceObjectName = 'Title'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.Font.Size = 16.000000000000000000
+        Appearance.Font.StyleExt = {00070000000000000004000000}
+        Appearance.TextAlign = Leading
+        Appearance.Width = 265.000000000000000000
+        Appearance.Height = 33.000000000000000000
+        Appearance.PlaceOffset.X = 6.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'Category'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.Font.StyleExt = {00040000000100000004000000}
+        Appearance.TextAlign = Leading
+        Appearance.Width = 255.000000000000000000
+        Appearance.Height = 32.000000000000000000
+        Appearance.PlaceOffset.X = 8.000000000000000000
+        Appearance.PlaceOffset.Y = 32.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'More'
+        AppearanceClassName = 'TAccessoryObjectAppearance'
+        Appearance.Width = 64.000000000000000000
+        Appearance.Height = 64.000000000000000000
+        Appearance.PlaceOffset.X = 278.000000000000000000
+      end>
+    ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
+      item
+        AppearanceObjectName = 'Text1'
+        AppearanceClassName = 'TTextObjectAppearance'
+      end>
+  end
+  object PrototypeBindSourceToDo: TPrototypeBindSource
+    AutoActivate = True
+    AutoPost = False
+    FieldDefs = <
+      item
+        Name = 'TestTitle'
+        Generator = 'BitmapNames'
+        ReadOnly = False
+      end
+      item
+        Name = 'TestCategory'
+        Generator = 'ColorsNames'
+        ReadOnly = False
+      end>
+    ScopeMappings = <>
+    Left = 200
+    Top = 160
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 196
+    Top = 53
+    object LinkFillControlToField1: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      Control = lstvwToDos
+      Track = True
+      FillDataSource = PrototypeBindSourceToDo
+      AutoFill = True
+      FillExpressions = <
+        item
+          SourceMemberName = 'TestTitle'
+          ControlMemberName = 'Title'
+        end
+        item
+          SourceMemberName = 'TestCategory'
+          ControlMemberName = 'Category'
+        end>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+end

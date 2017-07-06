@@ -1,0 +1,58 @@
+object FormFavMain: TFormFavMain
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 328
+  ClientWidth = 390
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 2
+  object ToolBar1: TToolBar
+    Size.Width = 390.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object LabelTitle: TLabel
+      Align = Client
+      Size.Width = 390.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.HorzAlign = Center
+      Text = 'Favorites'
+    end
+  end
+  object btnTextFiles: TButton
+    Align = Top
+    Position.Y = 44.000000000000000000
+    Size.Width = 390.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Text = 'Text Files'
+    OnClick = btnTextFilesClick
+  end
+  object btnJSON: TButton
+    Align = Top
+    Position.Y = 88.000000000000000000
+    Size.Width = 390.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'JSON'
+    OnClick = btnJSONClick
+  end
+  object btnXML: TButton
+    Align = Top
+    Position.Y = 132.000000000000000000
+    Size.Width = 390.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'XML'
+    OnClick = btnXMLClick
+  end
+end

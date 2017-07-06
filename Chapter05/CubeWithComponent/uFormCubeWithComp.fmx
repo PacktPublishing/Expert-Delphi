@@ -1,0 +1,17 @@
+object FormCubeWithComp: TFormCubeWithComp
+  Left = 0
+  Top = 0
+  Caption = 'Cube with a component'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object StrokeCube1: TStrokeCube
+    Color = claBlack
+    Width = 10.000000000000000000
+    Height = 10.000000000000000000
+    Depth = 10.000000000000000000
+  end
+end

@@ -1,0 +1,84 @@
+object FormMain: TFormMain
+  Left = 0
+  Top = 0
+  Caption = 'Game of Memory'
+  ClientHeight = 379
+  ClientWidth = 611
+  Fill.Kind = Solid
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnResize = FormResize
+  DesignerMasterStyle = 2
+  object ToolBar1: TToolBar
+    Size.Width = 611.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object spdbtnSettings: TSpeedButton
+      Align = Right
+      Position.X = 567.000000000000000000
+      Size.Width = 44.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'drawertoolbutton'
+      Text = 'spdbtnSettings'
+      OnClick = spdbtnSettingsClick
+    end
+    object spdbtnPlay: TSpeedButton
+      Align = Left
+      Size.Width = 44.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'playtoolbutton'
+      Text = 'spdbtnPlay'
+      OnClick = spdbtnPlayClick
+    end
+    object lblScore: TLabel
+      Align = Left
+      Position.X = 44.000000000000000000
+      Size.Width = 237.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Game of Memory'
+    end
+    object cmbbxLevel: TComboBox
+      Align = Right
+      Items.Strings = (
+        '4 pairs'
+        '6 pairs'
+        '8 pairs'
+        '10 pairs'
+        '12 pairs'
+        '14 pairs'
+        '16 pairs'
+        '18 pairs')
+      ItemIndex = 4
+      Position.X = 498.000000000000000000
+      Position.Y = 7.000000000000000000
+      Size.Width = 69.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      OnChange = cmbbxLevelChange
+    end
+  end
+  object grdltTiles: TGridLayout
+    Align = Client
+    ItemHeight = 80.000000000000000000
+    ItemWidth = 80.000000000000000000
+    Orientation = Horizontal
+    Size.Width = 611.000000000000000000
+    Size.Height = 335.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+  end
+  object TimerGame: TTimer
+    Enabled = False
+    Interval = 50
+    OnTimer = TimerGameTimer
+    Left = 232
+    Top = 136
+  end
+end

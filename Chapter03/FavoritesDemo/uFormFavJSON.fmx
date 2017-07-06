@@ -1,0 +1,111 @@
+object FormFavJSON: TFormFavJSON
+  Left = 0
+  Top = 0
+  Caption = 'JSON'
+  ClientHeight = 516
+  ClientWidth = 528
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 2
+  object ToolBar1: TToolBar
+    Size.Width = 528.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object spdbtnBack: TSpeedButton
+      Align = Left
+      Size.Width = 44.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'arrowlefttoolbutton'
+      Text = 'spdbtnBack'
+      OnClick = spdbtnBackClick
+    end
+    object Label1: TLabel
+      Align = Client
+      Margins.Right = 44.000000000000000000
+      Size.Width = 440.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.HorzAlign = Center
+      Text = 'JSON'
+    end
+  end
+  object btnWriteDOM: TButton
+    Align = Top
+    Position.Y = 44.000000000000000000
+    Size.Width = 528.000000000000000000
+    Size.Height = 45.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 9
+    Text = 'Write with JSON DOM'
+    OnClick = btnWriteDOMClick
+  end
+  object btnReadText: TButton
+    Align = Top
+    Position.Y = 179.000000000000000000
+    Size.Width = 528.000000000000000000
+    Size.Height = 45.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    Text = 'Read as Text'
+    OnClick = btnReadTextClick
+  end
+  object btnReadDOM: TButton
+    Align = Bottom
+    Position.Y = 426.000000000000000000
+    Size.Width = 528.000000000000000000
+    Size.Height = 45.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Text = 'Read with JSON DOM'
+    OnClick = btnReadDOMClick
+  end
+  object btnWriteWriter: TButton
+    Align = Top
+    Position.Y = 89.000000000000000000
+    Size.Width = 528.000000000000000000
+    Size.Height = 45.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 8
+    Text = 'Write with TJSONTextWriter'
+    OnClick = btnWriteWriterClick
+  end
+  object btnWriteBuilder: TButton
+    Align = Top
+    Position.Y = 134.000000000000000000
+    Size.Width = 528.000000000000000000
+    Size.Height = 45.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    Text = 'Write with TJSONObjectBuilder'
+    OnClick = btnWriteBuilderClick
+  end
+  object MemoLog: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Align = Client
+    Margins.Left = 4.000000000000000000
+    Margins.Top = 4.000000000000000000
+    Margins.Right = 4.000000000000000000
+    Margins.Bottom = 4.000000000000000000
+    Size.Width = 520.000000000000000000
+    Size.Height = 194.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 10
+    Viewport.Width = 512.000000000000000000
+    Viewport.Height = 186.000000000000000000
+  end
+  object btnReadReader: TButton
+    Align = Bottom
+    Position.Y = 471.000000000000000000
+    Size.Width = 528.000000000000000000
+    Size.Height = 45.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Text = 'Read with TJSONTextReader'
+    OnClick = btnReadReaderClick
+  end
+end

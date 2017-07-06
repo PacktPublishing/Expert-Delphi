@@ -1,0 +1,50 @@
+object FormLifecycle: TFormLifecycle
+  Left = 0
+  Top = 0
+  Caption = 'App Lifecycle'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 2
+  object ToolBar1: TToolBar
+    Size.Width = 640.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object lblTitle: TLabel
+      Align = Client
+      Margins.Left = 44.000000000000000000
+      Size.Width = 552.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.HorzAlign = Center
+      Text = 'App Lifecycle'
+      TabOrder = 0
+    end
+    object spdbtnClear: TSpeedButton
+      Align = Right
+      Position.X = 596.000000000000000000
+      Size.Width = 44.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'trashtoolbutton'
+      Text = 'spdbtnClear'
+      OnClick = spdbtnClearClick
+    end
+  end
+  object MemoLog: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 436.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Viewport.Width = 632.000000000000000000
+    Viewport.Height = 428.000000000000000000
+  end
+end

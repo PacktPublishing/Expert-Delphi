@@ -1,0 +1,52 @@
+object FormPhotoDisplay: TFormPhotoDisplay
+  Left = 0
+  Top = 0
+  Caption = 'Photo Display'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 2
+  object ToolBar1: TToolBar
+    Size.Width = 640.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Label1: TLabel
+      Align = Client
+      Size.Width = 640.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = 'Photo Display'
+      TabOrder = 0
+    end
+  end
+  object ImageDisplay: TImage
+    MultiResBitmap = <
+      item
+      end>
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 436.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object TetheringManager1: TTetheringManager
+    OnRequestManagerPassword = TetheringManager1RequestManagerPassword
+    Password = '123456789'
+    Text = 'Photo Display Mgr'
+    AllowedAdapters = 'Network'
+    Left = 104
+    Top = 120
+  end
+  object TetheringAppProfile1: TTetheringAppProfile
+    Manager = TetheringManager1
+    Text = 'Photo Display Profile'
+    Actions = <>
+    Resources = <>
+    OnResourceReceived = TetheringAppProfile1ResourceReceived
+    Left = 160
+    Top = 232
+  end
+end

@@ -1,0 +1,61 @@
+object FormFavXML: TFormFavXML
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 2
+  object ToolBar1: TToolBar
+    Size.Width = 640.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object spdbtnBack: TSpeedButton
+      Align = Left
+      Size.Width = 44.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'arrowlefttoolbutton'
+      Text = 'spdbtnBack'
+      OnClick = spdbtnBackClick
+    end
+    object Label1: TLabel
+      Align = Client
+      Margins.Right = 44.000000000000000000
+      Size.Width = 552.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.HorzAlign = Center
+      Text = 'XML'
+    end
+  end
+  object btnWrite: TButton
+    Align = Top
+    Position.Y = 44.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Write XML'
+    OnClick = btnWriteClick
+  end
+  object btnRead: TButton
+    Align = Top
+    Position.Y = 88.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Read XML'
+    OnClick = btnReadClick
+  end
+  object XMLDocument1: TXMLDocument
+    Left = 400
+    Top = 272
+    DOMVendorDesc = 'Omni XML'
+  end
+end

@@ -1,0 +1,13 @@
+﻿[lstvwToDos]
+Coordinates=10,10,89,195
+Visible=True
+
+[PrototypeBindSourceToDo]
+Coordinates=150,10,146,87
+
+[]
+Coordinates=108,107,82,33
+
+[BindingsList1]
+Coordinates=118,116,82,33
+

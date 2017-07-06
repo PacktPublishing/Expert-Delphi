@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{018BFFD9-2A18-4B7E-9C8F-58D5D405834A}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="LightService\LightSensorService.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="LightServiceApp\LightServiceApp.dproj">
+            <Dependencies>LightService\LightSensorService.dproj</Dependencies>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="LightSensorService">
+        <MSBuild Projects="LightService\LightSensorService.dproj"/>
+    </Target>
+    <Target Name="LightSensorService:Clean">
+        <MSBuild Projects="LightService\LightSensorService.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="LightSensorService:Make">
+        <MSBuild Projects="LightService\LightSensorService.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="LightServiceApp" DependsOnTargets="LightSensorService">
+        <MSBuild Projects="LightServiceApp\LightServiceApp.dproj"/>
+    </Target>
+    <Target Name="LightServiceApp:Clean" DependsOnTargets="LightSensorService:Clean">
+        <MSBuild Projects="LightServiceApp\LightServiceApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="LightServiceApp:Make" DependsOnTargets="LightSensorService:Make">
+        <MSBuild Projects="LightServiceApp\LightServiceApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="LightSensorService;LightServiceApp"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="LightSensorService:Clean;LightServiceApp:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="LightSensorService:Make;LightServiceApp:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

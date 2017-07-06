@@ -1,0 +1,135 @@
+object FormStylesTest2: TFormStylesTest2
+  Left = 0
+  Top = 0
+  Caption = 'Styles Test'
+  ClientHeight = 450
+  ClientWidth = 365
+  StyleBook = DMStyles.StyleBookTransparent
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object ToolBar1: TToolBar
+    Size.Width = 365.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object SpeedButton1: TSpeedButton
+      Align = Left
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'drawertoolbutton'
+      Text = 'SpeedButton1'
+    end
+    object Label1: TLabel
+      Align = Client
+      Size.Width = 317.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      Text = 'Label1'
+    end
+  end
+  object TabControl1: TTabControl
+    Align = Client
+    Size.Width = 365.000000000000000000
+    Size.Height = 406.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 0
+    TabOrder = 2
+    TabPosition = PlatformDefault
+    Sizes = (
+      365s
+      357s
+      365s
+      357s
+      365s
+      357s)
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 71.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'tabitemfeatured'
+      TabOrder = 0
+      Text = 'TabItem1'
+      ExplicitSize.cx = 115.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object ArcDial1: TArcDial
+        Position.X = 16.000000000000000000
+        Position.Y = 16.000000000000000000
+        Size.Width = 100.000000000000000000
+        Size.Height = 100.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+      end
+      object ArcDial2: TArcDial
+        Position.X = 128.000000000000000000
+        Position.Y = 16.000000000000000000
+        Size.Width = 100.000000000000000000
+        Size.Height = 100.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+      end
+      object ArcDial3: TArcDial
+        Position.X = 248.000000000000000000
+        Position.Y = 16.000000000000000000
+        Size.Width = 100.000000000000000000
+        Size.Height = 100.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+      end
+      object CheckBox1: TCheckBox
+        Position.X = 32.000000000000000000
+        Position.Y = 144.000000000000000000
+        TabOrder = 3
+        Text = 'CheckBox1'
+      end
+      object Switch1: TSwitch
+        IsChecked = False
+        Position.X = 152.000000000000000000
+        Position.Y = 136.000000000000000000
+        TabOrder = 4
+      end
+      object Button1: TButton
+        Position.X = 240.000000000000000000
+        Position.Y = 128.000000000000000000
+        TabOrder = 5
+        Text = 'Button1'
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 71.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'tabitemhistory'
+      TabOrder = 0
+      Text = 'TabItem2'
+      ExplicitSize.cx = 115.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+    end
+    object TabItem3: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 71.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'tabitemmore'
+      TabOrder = 0
+      Text = 'TabItem3'
+      ExplicitSize.cx = 117.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+    end
+  end
+end

@@ -1,0 +1,61 @@
+inherited FormContact_LgXhdpiTb: TFormContact_LgXhdpiTb
+  ClientHeight = 829
+  ClientWidth = 480
+  DesignerMasterStyle = 2
+  inherited FrameAddressHome: TFrameAddress
+    inherited edtStreet: TEdit
+      Size.Height = 32.000000000000000000
+    end
+    inherited edtStreetNr: TEdit
+      Size.Height = 32.000000000000000000
+    end
+    inherited edtCity: TEdit
+      Size.Height = 32.000000000000000000
+    end
+    inherited lblAddressTitle: TLabel
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+    inherited edtCountry: TEdit
+      Size.Height = 32.000000000000000000
+    end
+    inherited edtZipCode: TEdit
+      Size.Height = 32.000000000000000000
+    end
+  end
+  inherited FrameAddressOffice: TFrameAddress
+    inherited edtStreet: TEdit
+      Size.Height = 32.000000000000000000
+    end
+    inherited edtStreetNr: TEdit
+      Size.Height = 32.000000000000000000
+    end
+    inherited edtCity: TEdit
+      Size.Height = 32.000000000000000000
+    end
+    inherited lblAddressTitle: TLabel
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+    inherited edtCountry: TEdit
+      Size.Height = 32.000000000000000000
+    end
+    inherited edtZipCode: TEdit
+      Size.Height = 32.000000000000000000
+    end
+  end
+  inherited ToolBar1: TToolBar
+    Size.Width = 480.000000000000000000
+    Size.Height = 48.000000000000000000
+    inherited lblContact: TLabel
+      Size.Width = 480.000000000000000000
+      Size.Height = 48.000000000000000000
+    end
+  end
+  inherited edtFirstname: TEdit
+    Size.Width = 449.000000000000000000
+    Size.Height = 32.000000000000000000
+  end
+  inherited Edit1: TEdit
+    Size.Width = 449.000000000000000000
+    Size.Height = 32.000000000000000000
+  end
+end

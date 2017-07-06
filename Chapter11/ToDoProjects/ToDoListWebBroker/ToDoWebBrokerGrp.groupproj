@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{55F2CFE3-090A-4018-9CCB-29F459118CB7}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="standalone\ToDoWebBrokerStandaloneHTTP.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="apache\ToDoWebBrokerApache.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="restclient\ToDoListRESTClient.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ToDoWebBrokerStandaloneHTTP">
+        <MSBuild Projects="standalone\ToDoWebBrokerStandaloneHTTP.dproj"/>
+    </Target>
+    <Target Name="ToDoWebBrokerStandaloneHTTP:Clean">
+        <MSBuild Projects="standalone\ToDoWebBrokerStandaloneHTTP.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ToDoWebBrokerStandaloneHTTP:Make">
+        <MSBuild Projects="standalone\ToDoWebBrokerStandaloneHTTP.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ToDoWebBrokerApache">
+        <MSBuild Projects="apache\ToDoWebBrokerApache.dproj"/>
+    </Target>
+    <Target Name="ToDoWebBrokerApache:Clean">
+        <MSBuild Projects="apache\ToDoWebBrokerApache.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ToDoWebBrokerApache:Make">
+        <MSBuild Projects="apache\ToDoWebBrokerApache.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ToDoListRESTClient">
+        <MSBuild Projects="restclient\ToDoListRESTClient.dproj"/>
+    </Target>
+    <Target Name="ToDoListRESTClient:Clean">
+        <MSBuild Projects="restclient\ToDoListRESTClient.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ToDoListRESTClient:Make">
+        <MSBuild Projects="restclient\ToDoListRESTClient.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ToDoWebBrokerStandaloneHTTP;ToDoWebBrokerApache;ToDoListRESTClient"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ToDoWebBrokerStandaloneHTTP:Clean;ToDoWebBrokerApache:Clean;ToDoListRESTClient:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ToDoWebBrokerStandaloneHTTP:Make;ToDoWebBrokerApache:Make;ToDoListRESTClient:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

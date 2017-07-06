@@ -1,0 +1,47 @@
+object FormMap: TFormMap
+  Left = 0
+  Top = 0
+  Caption = 'Delphi Maps'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 2
+  object ToolBar1: TToolBar
+    Size.Width = 640.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object cmbbxMapType: TComboBox
+      Items.Strings = (
+        'None'
+        'Normal'
+        'Satellite'
+        'Hybrid'
+        'Terrain')
+      ItemIndex = 1
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 137.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      OnChange = cmbbxMapTypeChange
+    end
+  end
+  object MapView1: TMapView
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 436.000000000000000000
+    Size.PlatformDefault = False
+    Zoom = 10.000000000000000000
+  end
+  object LocationSensor1: TLocationSensor
+    Active = True
+    OnLocationChanged = LocationSensor1LocationChanged
+    OnHeadingChanged = LocationSensor1HeadingChanged
+    Left = 72
+    Top = 120
+  end
+end

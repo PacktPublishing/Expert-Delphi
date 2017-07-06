@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{371B97D6-D7AF-4CDA-B422-726E346B9A93}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="HeartRateApp\HeartRateApp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="HRMGetIt\HRMGetIt.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="HeartRateApp">
+        <MSBuild Projects="HeartRateApp\HeartRateApp.dproj"/>
+    </Target>
+    <Target Name="HeartRateApp:Clean">
+        <MSBuild Projects="HeartRateApp\HeartRateApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="HeartRateApp:Make">
+        <MSBuild Projects="HeartRateApp\HeartRateApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="HRMGetIt">
+        <MSBuild Projects="HRMGetIt\HRMGetIt.dproj"/>
+    </Target>
+    <Target Name="HRMGetIt:Clean">
+        <MSBuild Projects="HRMGetIt\HRMGetIt.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="HRMGetIt:Make">
+        <MSBuild Projects="HRMGetIt\HRMGetIt.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="HeartRateApp;HRMGetIt"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="HeartRateApp:Clean;HRMGetIt:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="HeartRateApp:Make;HRMGetIt:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,72 @@
+object FormDemo: TFormDemo
+  Left = 0
+  Top = 0
+  Caption = 'Object Pascal Language Demo'
+  ClientHeight = 382
+  ClientWidth = 429
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 2
+  object ButtonMultiline: TButton
+    Align = Top
+    Size.Width = 429.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Text = 'Multiline message'
+    OnClick = ButtonMultilineClick
+  end
+  object btnPersonsTList: TButton
+    Align = Top
+    Position.Y = 41.000000000000000000
+    Size.Width = 429.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Text = 'Persons - TList'
+    OnClick = btnPersonsTListClick
+  end
+  object MemoLog: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    TextSettings.WordWrap = True
+    Align = Client
+    Size.Width = 429.000000000000000000
+    Size.Height = 165.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Viewport.Width = 421.000000000000000000
+    Viewport.Height = 157.000000000000000000
+  end
+  object btnPersonsGenerics: TButton
+    Align = Top
+    Position.Y = 85.000000000000000000
+    Size.Width = 429.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Text = 'Persons - Generics'
+    OnClick = btnPersonsGenericsClick
+  end
+  object btnDoStringProc: TButton
+    Align = Top
+    Position.Y = 129.000000000000000000
+    Size.Width = 429.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Do String Proc'
+    OnClick = btnDoStringProcClick
+  end
+  object btnDocAttribute: TButton
+    Align = Top
+    Position.Y = 173.000000000000000000
+    Size.Width = 429.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Doc Custom Attribute'
+    OnClick = btnDocAttributeClick
+  end
+end

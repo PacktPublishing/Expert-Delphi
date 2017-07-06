@@ -1,0 +1,63 @@
+object FormStars: TFormStars
+  Left = 0
+  Top = 0
+  Caption = 'Starfield'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Viewport3D1: TViewport3D
+    Align = Client
+    Camera = Camera1
+    Color = claBlack
+    Size.Width = 640.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    UsingDesignCamera = False
+    object Camera1: TCamera
+      AngleOfView = 45.000000000000000000
+      Position.Z = -5.000000000000000000
+      Width = 1.000000000000000000
+      Height = 1.000000000000000000
+      Depth = 1.000000000000000000
+      object Light1: TLight
+        Color = claWhite
+        LightType = Directional
+        SpotCutOff = 180.000000000000000000
+        Width = 1.000000000000000000
+        Height = 1.000000000000000000
+        Depth = 1.000000000000000000
+      end
+    end
+    object DummyScene: TDummy
+      Width = 1.000000000000000000
+      Height = 1.000000000000000000
+      Depth = 1.000000000000000000
+      object SphereStar: TSphere
+        Position.Z = -10.000000000000000000
+        Width = 1.000000000000000000
+        Height = 1.000000000000000000
+        Depth = 1.000000000000000000
+        MaterialSource = LightMaterialSource1
+      end
+    end
+  end
+  object LightMaterialSource1: TLightMaterialSource
+    Diffuse = claWhite
+    Ambient = xFF202020
+    Emissive = claNull
+    Specular = xFF606060
+    Shininess = 30
+    Left = 120
+    Top = 264
+  end
+  object Timer1: TTimer
+    Interval = 50
+    OnTimer = Timer1Timer
+    Left = 88
+    Top = 120
+  end
+end

@@ -1,0 +1,13 @@
+object FormWireframe: TFormWireframe
+  Left = 0
+  Top = 0
+  Caption = 'Wireframe Test'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = Form3DCreate
+  OnDestroy = Form3DDestroy
+  DesignerMasterStyle = 0
+end

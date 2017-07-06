@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Favorites>
+  <Favorite>
+    <URL>www.embarcadero.com/products/delphi</URL>
+    <Caption>Delphi Home Page</Caption>
+  </Favorite>
+  <Favorite>
+    <URL>docwiki.embarcadero.com/RADStudio/en</URL>
+    <Caption>RAD Studio online documentation</Caption>
+  </Favorite>
+</Favorites>

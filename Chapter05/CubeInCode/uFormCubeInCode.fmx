@@ -1,0 +1,19 @@
+object FormCubeInCode: TFormCubeInCode
+  Left = 0
+  Top = 0
+  Caption = 'Cube in Code'
+  ClientHeight = 480
+  ClientWidth = 640
+  UsingDesignCamera = False
+  Visible = True
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnRender = Form3DRender
+  DesignerMasterStyle = 0
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 304
+    Top = 224
+  end
+end

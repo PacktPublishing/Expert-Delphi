@@ -1,0 +1,43 @@
+object FormLightLevel: TFormLightLevel
+  Left = 0
+  Top = 0
+  Caption = 'Android Ambient Light'
+  ClientHeight = 480
+  ClientWidth = 457
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object btnStartService: TButton
+    Align = Top
+    Margins.Left = 16.000000000000000000
+    Margins.Top = 16.000000000000000000
+    Margins.Right = 16.000000000000000000
+    Margins.Bottom = 16.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 16.000000000000000000
+    Size.Width = 425.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Text = 'Start Light Sensor Service'
+    OnClick = btnStartServiceClick
+  end
+  object lblLux: TLabel
+    Align = Top
+    Margins.Left = 16.000000000000000000
+    Margins.Right = 16.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 76.000000000000000000
+    Size.Width = 425.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    Text = '12.65823 [Lux]'
+    TabOrder = 1
+  end
+  object NotificationCenter1: TNotificationCenter
+    OnReceiveLocalNotification = NotificationCenter1ReceiveLocalNotification
+    Left = 88
+    Top = 136
+  end
+end

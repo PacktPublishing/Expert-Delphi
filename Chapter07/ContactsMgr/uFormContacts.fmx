@@ -1,0 +1,212 @@
+object FormContacts: TFormContacts
+  Left = 0
+  Top = 0
+  Caption = 'Delphi Contacts'
+  ClientHeight = 480
+  ClientWidth = 395
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 2
+  object TabControlMain: TTabControl
+    Align = Client
+    Size.Width = 395.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 0
+    TabOrder = 2
+    TabPosition = None
+    Sizes = (
+      395s
+      480s
+      395s
+      480s
+      395s
+      480s)
+    object tbiWelcome: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 11.000000000000000000
+      Size.Height = 11.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'tbiWelcome'
+      ExplicitSize.cx = 11.000000000000000000
+      ExplicitSize.cy = 11.000000000000000000
+      object btnShowContacts: TButton
+        Align = Client
+        Size.Width = 395.000000000000000000
+        Size.Height = 480.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Show Contacts'
+        OnClick = btnShowContactsClick
+      end
+    end
+    object tbiContacts: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 11.000000000000000000
+      Size.Height = 11.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'tbiContacts'
+      ExplicitSize.cx = 11.000000000000000000
+      ExplicitSize.cy = 11.000000000000000000
+      object ToolBar1: TToolBar
+        Size.Width = 395.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object lblContacts: TLabel
+          Align = Client
+          Margins.Right = 44.000000000000000000
+          Size.Width = 307.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Center
+          Text = 'Contacts'
+          TabOrder = 0
+        end
+        object spdbtnAdd: TSpeedButton
+          Align = Left
+          Size.Width = 44.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'addtoolbutton'
+          Text = 'spdbtnAdd'
+          OnClick = spdbtnAddClick
+        end
+      end
+      object lstvwContacts: TListView
+        ItemAppearanceClassName = 'TListItemAppearance'
+        ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+        HeaderAppearanceClassName = 'TListHeaderObjects'
+        FooterAppearanceClassName = 'TListHeaderObjects'
+        Align = Client
+        Size.Width = 395.000000000000000000
+        Size.Height = 436.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        OnItemClick = lstvwContactsItemClick
+        OnDeletingItem = lstvwContactsDeletingItem
+      end
+    end
+    object tbiContactDetails: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 11.000000000000000000
+      Size.Height = 11.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'tbiContactDetails'
+      ExplicitSize.cx = 11.000000000000000000
+      ExplicitSize.cy = 11.000000000000000000
+      object ToolBar2: TToolBar
+        Size.Width = 395.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object spdbtnBack: TSpeedButton
+          Action = ctaContacts
+          Align = Left
+          Enabled = True
+          ImageIndex = -1
+          Size.Width = 44.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'arrowlefttoolbutton'
+        end
+        object btnSave: TButton
+          Align = Right
+          Margins.Right = 8.000000000000000000
+          Position.X = 314.000000000000000000
+          Position.Y = 7.000000000000000000
+          Size.Width = 73.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'listitembutton'
+          TabOrder = 1
+          Text = 'Save'
+          OnClick = btnSaveClick
+        end
+        object lblContactInfo: TLabel
+          Align = Client
+          Size.Width = 270.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Center
+          Text = 'Contact Info'
+          TabOrder = 2
+        end
+      end
+      object edtFirstname: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 2
+        Position.X = 32.000000000000000000
+        Position.Y = 88.000000000000000000
+        Size.Width = 313.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        object lblFirstname: TLabel
+          Position.Y = -24.000000000000000000
+          Size.Width = 137.000000000000000000
+          Size.Height = 21.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Firstname'
+          TabOrder = 0
+        end
+      end
+      object edtLastname: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 1
+        Position.X = 32.000000000000000000
+        Position.Y = 152.000000000000000000
+        Size.Width = 313.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        object lblLastname: TLabel
+          Position.Y = -24.000000000000000000
+          Size.Width = 137.000000000000000000
+          Size.Height = 21.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Lastname'
+          TabOrder = 0
+        end
+      end
+    end
+  end
+  object AddressBook1: TAddressBook
+    OnPermissionRequest = AddressBook1PermissionRequest
+    Left = 88
+    Top = 256
+  end
+  object ActionList1: TActionList
+    Left = 232
+    Top = 200
+    object ctaContacts: TChangeTabAction
+      Category = 'Tab'
+      Tab = tbiContacts
+    end
+    object actRefreshContacts: TAction
+      Category = 'Tab'
+      Text = 'actRefreshContacts'
+      OnExecute = actRefreshContactsExecute
+    end
+    object ctaContactDetails: TChangeTabAction
+      Category = 'Tab'
+      Tab = tbiContactDetails
+    end
+  end
+end

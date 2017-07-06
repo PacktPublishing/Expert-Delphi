@@ -1,0 +1,62 @@
+object FormWebBrowser: TFormWebBrowser
+  Left = 0
+  Top = 0
+  Caption = 'Delphi Web Browser'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 2
+  object ToolBar1: TToolBar
+    Size.Width = 640.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object edtURL: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Client
+      TabOrder = 0
+      Text = 'http://community.embarcadero.com'
+      Margins.Top = 8.000000000000000000
+      Size.Width = 508.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object spdbtnGo: TSpeedButton
+      Align = Right
+      Position.X = 596.000000000000000000
+      Size.Width = 44.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'refreshtoolbutton'
+      Text = 'spdbtnGo'
+      OnClick = spdbtnGoClick
+    end
+    object spdbtnBack: TSpeedButton
+      Align = Left
+      Size.Width = 44.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'arrowlefttoolbutton'
+      Text = 'spdbtnGo'
+      OnClick = spdbtnBackClick
+    end
+    object spdbtnForward: TSpeedButton
+      Align = Left
+      Position.X = 44.000000000000000000
+      Size.Width = 44.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'arrowrighttoolbutton'
+      Text = 'spdbtnForward'
+      OnClick = spdbtnForwardClick
+    end
+  end
+  object WebBrowser1: TWebBrowser
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 436.000000000000000000
+    Size.PlatformDefault = False
+  end
+end

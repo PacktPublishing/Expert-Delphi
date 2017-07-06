@@ -1,0 +1,120 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{F9E56C55-44FB-482E-A1BD-BB36CE694142}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="CubeInCode\CubeInCode.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="CubeWithComponent\CubeWithComp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="WireframeApp\WireframeTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="MovingEarth\MovingEarth.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Arrows3D\Arrows3D.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="HelmetApp\HelmetApp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Starfield\Starfield.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="TwistMe\TwistMe.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="CubeInCode">
+        <MSBuild Projects="CubeInCode\CubeInCode.dproj"/>
+    </Target>
+    <Target Name="CubeInCode:Clean">
+        <MSBuild Projects="CubeInCode\CubeInCode.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CubeInCode:Make">
+        <MSBuild Projects="CubeInCode\CubeInCode.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CubeWithComp">
+        <MSBuild Projects="CubeWithComponent\CubeWithComp.dproj"/>
+    </Target>
+    <Target Name="CubeWithComp:Clean">
+        <MSBuild Projects="CubeWithComponent\CubeWithComp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CubeWithComp:Make">
+        <MSBuild Projects="CubeWithComponent\CubeWithComp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="WireframeTest">
+        <MSBuild Projects="WireframeApp\WireframeTest.dproj"/>
+    </Target>
+    <Target Name="WireframeTest:Clean">
+        <MSBuild Projects="WireframeApp\WireframeTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WireframeTest:Make">
+        <MSBuild Projects="WireframeApp\WireframeTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MovingEarth">
+        <MSBuild Projects="MovingEarth\MovingEarth.dproj"/>
+    </Target>
+    <Target Name="MovingEarth:Clean">
+        <MSBuild Projects="MovingEarth\MovingEarth.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MovingEarth:Make">
+        <MSBuild Projects="MovingEarth\MovingEarth.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Arrows3D">
+        <MSBuild Projects="Arrows3D\Arrows3D.dproj"/>
+    </Target>
+    <Target Name="Arrows3D:Clean">
+        <MSBuild Projects="Arrows3D\Arrows3D.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Arrows3D:Make">
+        <MSBuild Projects="Arrows3D\Arrows3D.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="HelmetApp">
+        <MSBuild Projects="HelmetApp\HelmetApp.dproj"/>
+    </Target>
+    <Target Name="HelmetApp:Clean">
+        <MSBuild Projects="HelmetApp\HelmetApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="HelmetApp:Make">
+        <MSBuild Projects="HelmetApp\HelmetApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Starfield">
+        <MSBuild Projects="Starfield\Starfield.dproj"/>
+    </Target>
+    <Target Name="Starfield:Clean">
+        <MSBuild Projects="Starfield\Starfield.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Starfield:Make">
+        <MSBuild Projects="Starfield\Starfield.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TwistMe">
+        <MSBuild Projects="TwistMe\TwistMe.dproj"/>
+    </Target>
+    <Target Name="TwistMe:Clean">
+        <MSBuild Projects="TwistMe\TwistMe.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TwistMe:Make">
+        <MSBuild Projects="TwistMe\TwistMe.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="CubeInCode;CubeWithComp;WireframeTest;MovingEarth;Arrows3D;HelmetApp;Starfield;TwistMe"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="CubeInCode:Clean;CubeWithComp:Clean;WireframeTest:Clean;MovingEarth:Clean;Arrows3D:Clean;HelmetApp:Clean;Starfield:Clean;TwistMe:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="CubeInCode:Make;CubeWithComp:Make;WireframeTest:Make;MovingEarth:Make;Arrows3D:Make;HelmetApp:Make;Starfield:Make;TwistMe:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

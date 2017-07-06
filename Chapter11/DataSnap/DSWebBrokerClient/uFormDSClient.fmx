@@ -1,0 +1,25 @@
+object FormDSClient: TFormDSClient
+  Left = 0
+  Top = 0
+  Caption = 'Delphi DataSnap Client'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 2
+  object btnReverse: TButton
+    Position.X = 24.000000000000000000
+    Position.Y = 32.000000000000000000
+    TabOrder = 0
+    Text = 'Reverse'
+    OnClick = btnReverseClick
+  end
+  object edtTest: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 1
+    Text = 'Delphi'
+    Position.X = 128.000000000000000000
+    Position.Y = 32.000000000000000000
+  end
+end

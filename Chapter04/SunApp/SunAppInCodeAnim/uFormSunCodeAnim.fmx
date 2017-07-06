@@ -1,0 +1,25 @@
+object FormSunCodeAnim: TFormSunCodeAnim
+  Left = 0
+  Top = 0
+  Caption = 'Sun - Code - Animated'
+  ClientHeight = 472
+  ClientWidth = 583
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object PaintBox1: TPaintBox
+    Align = Client
+    Size.Width = 583.000000000000000000
+    Size.Height = 472.000000000000000000
+    Size.PlatformDefault = False
+    OnPaint = PaintBox1Paint
+  end
+  object Timer1: TTimer
+    Interval = 20
+    OnTimer = Timer1Timer
+    Left = 72
+    Top = 56
+  end
+end

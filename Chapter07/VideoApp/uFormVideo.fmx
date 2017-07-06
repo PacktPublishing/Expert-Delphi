@@ -1,0 +1,61 @@
+object FormVideo: TFormVideo
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 557
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 2
+  object ToolBar1: TToolBar
+    Size.Width = 557.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object chkbxTorch: TCheckBox
+      Align = Right
+      Position.X = 480.000000000000000000
+      Size.Width = 77.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Torch'
+      OnChange = chkbxTorchChange
+    end
+    object chkbxCamera: TCheckBox
+      Align = Left
+      Margins.Left = 8.000000000000000000
+      Position.X = 8.000000000000000000
+      Size.Width = 153.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Camera Active'
+      OnChange = chkbxCameraChange
+    end
+    object lblTitle: TLabel
+      Align = Client
+      Size.Width = 319.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Delphi Video'
+      TabOrder = 3
+    end
+  end
+  object imgVideo: TImage
+    MultiResBitmap = <
+      item
+      end>
+    Align = Client
+    Size.Width = 557.000000000000000000
+    Size.Height = 436.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object CameraComponent1: TCameraComponent
+    OnSampleBufferReady = CameraComponent1SampleBufferReady
+    Left = 448
+    Top = 72
+  end
+end

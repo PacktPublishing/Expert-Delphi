@@ -1,0 +1,61 @@
+object FormHTTP: TFormHTTP
+  Left = 0
+  Top = 0
+  Caption = 'HTTP Client'
+  ClientHeight = 480
+  ClientWidth = 559
+  SystemStatusBar.Visibility = Invisible
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 2
+  object ToolBar1: TToolBar
+    Size.Width = 559.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object spdbtnDownload: TSpeedButton
+      Align = Right
+      Position.X = 515.000000000000000000
+      Size.Width = 44.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'arrowdowntoolbutton'
+      Text = 'spdbtnDownload'
+      OnClick = spdbtnDownloadClick
+    end
+    object edtURL: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Client
+      TabOrder = 1
+      Text = 'https://files.rcsb.org/download/4hhb.pdb'
+      Margins.Left = 8.000000000000000000
+      Margins.Top = 8.000000000000000000
+      Size.Width = 507.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object MemoData: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Align = Client
+    Size.Width = 559.000000000000000000
+    Size.Height = 436.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Viewport.Width = 551.000000000000000000
+    Viewport.Height = 428.000000000000000000
+  end
+  object NetHTTPClient1: TNetHTTPClient
+    Asynchronous = True
+    ConnectionTimeout = 60000
+    ResponseTimeout = 60000
+    AllowCookies = True
+    HandleRedirects = True
+    UserAgent = 'Embarcadero URI Client/1.0'
+    OnRequestCompleted = NetHTTPClient1RequestCompleted
+    Left = 88
+    Top = 328
+  end
+end

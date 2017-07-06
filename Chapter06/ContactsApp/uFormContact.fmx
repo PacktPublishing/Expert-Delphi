@@ -1,0 +1,115 @@
+object FormContact: TFormContact
+  Left = 0
+  Top = 0
+  Caption = 'Contact'
+  ClientHeight = 480
+  ClientWidth = 456
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 2
+  inline FrameAddressHome: TFrameAddress
+    Position.X = 16.000000000000000000
+    Position.Y = 184.000000000000000000
+    Size.Width = 208.000000000000000000
+    Size.Height = 184.000000000000000000
+    Size.PlatformDefault = False
+    inherited edtStreet: TEdit
+      Size.Height = 30.000000000000000000
+    end
+    inherited edtStreetNr: TEdit
+      Size.Height = 30.000000000000000000
+    end
+    inherited edtCity: TEdit
+      Size.Height = 30.000000000000000000
+    end
+    inherited lblAddressTitle: TLabel
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claBlue
+      Text = 'Home Address'
+    end
+    inherited edtCountry: TEdit
+      Size.Height = 30.000000000000000000
+    end
+    inherited edtZipCode: TEdit
+      Size.Height = 30.000000000000000000
+      inherited lblZipCode: TLabel
+        Size.Width = 81.000000000000000000
+      end
+    end
+  end
+  inline FrameAddressOffice: TFrameAddress
+    Position.X = 232.000000000000000000
+    Position.Y = 184.000000000000000000
+    Size.Width = 208.000000000000000000
+    Size.Height = 184.000000000000000000
+    Size.PlatformDefault = False
+    inherited edtStreet: TEdit
+      Size.Height = 30.000000000000000000
+    end
+    inherited edtStreetNr: TEdit
+      Size.Height = 30.000000000000000000
+    end
+    inherited edtCity: TEdit
+      Size.Height = 30.000000000000000000
+    end
+    inherited lblAddressTitle: TLabel
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      Text = 'Office Address'
+    end
+    inherited edtCountry: TEdit
+      Size.Height = 30.000000000000000000
+    end
+    inherited edtZipCode: TEdit
+      Size.Height = 30.000000000000000000
+      inherited lblZipCode: TLabel
+        Size.Width = 81.000000000000000000
+      end
+    end
+  end
+  object ToolBar1: TToolBar
+    Size.Width = 456.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object lblContact: TLabel
+      Align = Client
+      Size.Width = 456.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.HorzAlign = Center
+      Text = 'Contact'
+    end
+  end
+  object edtFirstname: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Anchors = [akLeft, akTop, akRight]
+    TabOrder = 4
+    Position.X = 16.000000000000000000
+    Position.Y = 72.000000000000000000
+    Size.Width = 425.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    object lblFirstname: TLabel
+      Position.X = -1.000000000000000000
+      Position.Y = -23.000000000000000000
+      Text = 'Firstname'
+    end
+  end
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Anchors = [akLeft, akTop, akRight]
+    TabOrder = 3
+    Position.X = 16.000000000000000000
+    Position.Y = 136.000000000000000000
+    Size.Width = 425.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    object lblLastname: TLabel
+      Position.X = -1.000000000000000000
+      Position.Y = -23.000000000000000000
+      Text = 'Lastname'
+    end
+  end
+end

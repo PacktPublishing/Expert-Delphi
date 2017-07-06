@@ -1,0 +1,38 @@
+object FormOSVer: TFormOSVer
+  Left = 0
+  Top = 0
+  Caption = 'Delphi - OS Version'
+  ClientHeight = 480
+  ClientWidth = 341
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 2
+  object ToolBar1: TToolBar
+    Size.Width = 341.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object lblTitle: TLabel
+      Align = Client
+      Size.Width = 341.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = 'What I'#39'm Running On?'
+      TabOrder = 0
+    end
+  end
+  object MemoLog: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Align = Client
+    Size.Width = 341.000000000000000000
+    Size.Height = 436.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Viewport.Width = 333.000000000000000000
+    Viewport.Height = 428.000000000000000000
+  end
+end

@@ -1,0 +1,108 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{F25E8D42-E4ED-48AD-96C4-1C3A2B3E2644}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="SunAppInCodeStatic\SunAppCodeStatic.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SunAppInCodeStaticHelper\SunAppCodeStaticHelper.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SunAppInCodeAnim\SunAppCodeAnim.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SunAppCompStatic\SunAppCompStatic.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SunAppCompAnim\SunAppCompAnim.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SunAppMove\SunAppMove.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SunAppRotate\SunAppRotate.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="SunAppCodeStatic">
+        <MSBuild Projects="SunAppInCodeStatic\SunAppCodeStatic.dproj"/>
+    </Target>
+    <Target Name="SunAppCodeStatic:Clean">
+        <MSBuild Projects="SunAppInCodeStatic\SunAppCodeStatic.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SunAppCodeStatic:Make">
+        <MSBuild Projects="SunAppInCodeStatic\SunAppCodeStatic.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SunAppCodeStaticHelper">
+        <MSBuild Projects="SunAppInCodeStaticHelper\SunAppCodeStaticHelper.dproj"/>
+    </Target>
+    <Target Name="SunAppCodeStaticHelper:Clean">
+        <MSBuild Projects="SunAppInCodeStaticHelper\SunAppCodeStaticHelper.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SunAppCodeStaticHelper:Make">
+        <MSBuild Projects="SunAppInCodeStaticHelper\SunAppCodeStaticHelper.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SunAppCodeAnim">
+        <MSBuild Projects="SunAppInCodeAnim\SunAppCodeAnim.dproj"/>
+    </Target>
+    <Target Name="SunAppCodeAnim:Clean">
+        <MSBuild Projects="SunAppInCodeAnim\SunAppCodeAnim.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SunAppCodeAnim:Make">
+        <MSBuild Projects="SunAppInCodeAnim\SunAppCodeAnim.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SunAppCompStatic">
+        <MSBuild Projects="SunAppCompStatic\SunAppCompStatic.dproj"/>
+    </Target>
+    <Target Name="SunAppCompStatic:Clean">
+        <MSBuild Projects="SunAppCompStatic\SunAppCompStatic.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SunAppCompStatic:Make">
+        <MSBuild Projects="SunAppCompStatic\SunAppCompStatic.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SunAppCompAnim">
+        <MSBuild Projects="SunAppCompAnim\SunAppCompAnim.dproj"/>
+    </Target>
+    <Target Name="SunAppCompAnim:Clean">
+        <MSBuild Projects="SunAppCompAnim\SunAppCompAnim.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SunAppCompAnim:Make">
+        <MSBuild Projects="SunAppCompAnim\SunAppCompAnim.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SunAppMove">
+        <MSBuild Projects="SunAppMove\SunAppMove.dproj"/>
+    </Target>
+    <Target Name="SunAppMove:Clean">
+        <MSBuild Projects="SunAppMove\SunAppMove.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SunAppMove:Make">
+        <MSBuild Projects="SunAppMove\SunAppMove.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SunAppRotate">
+        <MSBuild Projects="SunAppRotate\SunAppRotate.dproj"/>
+    </Target>
+    <Target Name="SunAppRotate:Clean">
+        <MSBuild Projects="SunAppRotate\SunAppRotate.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SunAppRotate:Make">
+        <MSBuild Projects="SunAppRotate\SunAppRotate.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="SunAppCodeStatic;SunAppCodeStaticHelper;SunAppCodeAnim;SunAppCompStatic;SunAppCompAnim;SunAppMove;SunAppRotate"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="SunAppCodeStatic:Clean;SunAppCodeStaticHelper:Clean;SunAppCodeAnim:Clean;SunAppCompStatic:Clean;SunAppCompAnim:Clean;SunAppMove:Clean;SunAppRotate:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="SunAppCodeStatic:Make;SunAppCodeStaticHelper:Make;SunAppCodeAnim:Make;SunAppCompStatic:Make;SunAppCompAnim:Make;SunAppMove:Make;SunAppRotate:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,46 @@
+object FormNotify: TFormNotify
+  Left = 0
+  Top = 0
+  Caption = 'Notify Me!'
+  ClientHeight = 480
+  ClientWidth = 418
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 2
+  object ToolBar1: TToolBar
+    Size.Width = 418.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object lblTitle: TLabel
+      Align = Client
+      Size.Width = 418.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = 'Delphi Notifications'
+      TabOrder = 0
+    end
+  end
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 3
+    Position.X = 40.000000000000000000
+    Position.Y = 216.000000000000000000
+  end
+  object btnNotify: TButton
+    Align = Top
+    Position.Y = 44.000000000000000000
+    Size.Width = 418.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Text = 'Notify Me!'
+    OnClick = btnNotifyClick
+  end
+  object NotificationCenter1: TNotificationCenter
+    Left = 96
+    Top = 312
+  end
+end

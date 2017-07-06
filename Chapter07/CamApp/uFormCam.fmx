@@ -1,0 +1,68 @@
+object FormCam: TFormCam
+  Left = 0
+  Top = 0
+  Caption = 'Camera'
+  ClientHeight = 396
+  ClientWidth = 322
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 2
+  object ToolBar1: TToolBar
+    Size.Width = 322.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object spdbtnTakePhoto: TSpeedButton
+      Action = TakePhotoFromCameraAction1
+      Align = Left
+      Enabled = True
+      ImageIndex = -1
+      Size.Width = 44.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'cameratoolbutton'
+    end
+    object spdbtnSharePhoto: TSpeedButton
+      Action = ShowShareSheetAction1
+      Align = Right
+      Enabled = True
+      ImageIndex = -1
+      Position.X = 278.000000000000000000
+      Size.Width = 44.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'actiontoolbutton'
+    end
+    object lblTitle: TLabel
+      Align = Client
+      Size.Width = 234.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = 'Delphi Camera'
+      TabOrder = 1
+    end
+  end
+  object ImagePhoto: TImage
+    MultiResBitmap = <
+      item
+      end>
+    Align = Client
+    Size.Width = 322.000000000000000000
+    Size.Height = 352.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object ActionList1: TActionList
+    Left = 48
+    Top = 88
+    object TakePhotoFromCameraAction1: TTakePhotoFromCameraAction
+      Category = 'Media Library'
+      OnDidFinishTaking = TakePhotoFromCameraAction1DidFinishTaking
+    end
+    object ShowShareSheetAction1: TShowShareSheetAction
+      Category = 'Media Library'
+      OnBeforeExecute = ShowShareSheetAction1BeforeExecute
+    end
+  end
+end

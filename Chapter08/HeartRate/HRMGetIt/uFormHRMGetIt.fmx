@@ -1,0 +1,47 @@
+object FormHTMGetIt: TFormHTMGetIt
+  Left = 0
+  Top = 0
+  Caption = 'Delphi Heart Rate Monitor - Thing Connect'
+  ClientHeight = 480
+  ClientWidth = 333
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 2
+  object lblHeartRate: TLabel
+    Margins.Left = 8.000000000000000000
+    Margins.Top = 8.000000000000000000
+    Margins.Right = 8.000000000000000000
+    Margins.Bottom = 8.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 56.000000000000000000
+    Size.Width = 313.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Heart Rate: ? BPM'
+    TabOrder = 3
+  end
+  object chkbxHRM: TCheckBox
+    Position.X = 16.000000000000000000
+    Position.Y = 16.000000000000000000
+    Size.Width = 289.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Heart Rate Monitor Enabled'
+    OnChange = chkbxHRMChange
+  end
+  object BluetoothDeviceDiscoveryManager1: TBluetoothDeviceDiscoveryManager
+    DiscoveryTimeout = 6000
+    Left = 112
+    Top = 184
+  end
+  object GenericHeartRateMonitor1: TGenericHeartRateMonitor
+    DiscoveryManager = BluetoothDeviceDiscoveryManager1
+    DeviceName = 'GenericHeartRateMonitor'
+    OnDeviceDiscovered = GenericHeartRateMonitor1DeviceDiscovered
+    OnHeartRateMeasurementUpdate = GenericHeartRateMonitor1HeartRateMeasurementUpdate
+    Left = 104
+    Top = 272
+  end
+end

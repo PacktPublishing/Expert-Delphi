@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{69E89FCF-C549-48BC-A890-2246267A4B05}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ToDoListSQLite\ToDoList.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ToDoTest\ToDoTest.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ToDoList">
+        <MSBuild Projects="ToDoListSQLite\ToDoList.dproj"/>
+    </Target>
+    <Target Name="ToDoList:Clean">
+        <MSBuild Projects="ToDoListSQLite\ToDoList.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ToDoList:Make">
+        <MSBuild Projects="ToDoListSQLite\ToDoList.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ToDoTest">
+        <MSBuild Projects="ToDoTest\ToDoTest.dproj"/>
+    </Target>
+    <Target Name="ToDoTest:Clean">
+        <MSBuild Projects="ToDoTest\ToDoTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ToDoTest:Make">
+        <MSBuild Projects="ToDoTest\ToDoTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ToDoList;ToDoTest"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ToDoList:Clean;ToDoTest:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ToDoList:Make;ToDoTest:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

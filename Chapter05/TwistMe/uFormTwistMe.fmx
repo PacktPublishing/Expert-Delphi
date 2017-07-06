@@ -1,0 +1,38 @@
+object FormTwistMe: TFormTwistMe
+  Left = 0
+  Top = 0
+  Caption = 'Twist Me'
+  ClientHeight = 357
+  ClientWidth = 266
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Viewport3D1: TViewport3D
+    Align = Client
+    Size.Width = 266.000000000000000000
+    Size.Height = 357.000000000000000000
+    Size.PlatformDefault = False
+    object Layer3D1: TLayer3D
+      Align = Client
+      Height = 357.000000000000000000
+      Position.X = 133.000000000000000000
+      Position.Y = 178.000000000000000000
+      Projection = Screen
+      Resolution = 50
+      StyleLookup = 'backgroundstyle'
+      Width = 266.000000000000000000
+      object Button1: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 48.000000000000000000
+        Position.Y = 104.000000000000000000
+        Size.Width = 185.000000000000000000
+        Size.Height = 78.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Click me to twist!'
+        TextSettings.Font.Size = 18.000000000000000000
+        OnClick = Button1Click
+      end
+    end
+  end
+end

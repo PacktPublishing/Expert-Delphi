@@ -1,0 +1,238 @@
+object FormToDo: TFormToDo
+  Left = 0
+  Top = 0
+  Caption = 'To-Do List'
+  ClientHeight = 480
+  ClientWidth = 370
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 2
+  object tbctrlMain: TTabControl
+    Align = Client
+    Size.Width = 370.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 1
+    TabOrder = 0
+    TabPosition = None
+    Sizes = (
+      370s
+      480s
+      370s
+      480s)
+    object tbiList: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 11.000000000000000000
+      Size.Height = 11.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'tbiList'
+      ExplicitSize.cx = 11.000000000000000000
+      ExplicitSize.cy = 11.000000000000000000
+      object ToolBar1: TToolBar
+        Size.Width = 370.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object spdbtnAdd: TSpeedButton
+          Action = actAdd
+          Align = Left
+          Enabled = True
+          ImageIndex = -1
+          Size.Width = 44.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'addtoolbutton'
+        end
+        object lblToDoList: TLabel
+          Align = Client
+          Size.Width = 326.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'toollabel'
+          Text = 'To-Do List'
+          TabOrder = 2
+        end
+      end
+      object lstvwToDos: TListView
+        ItemAppearanceClassName = 'TDynamicAppearance'
+        ItemEditAppearanceClassName = 'TDynamicAppearance'
+        HeaderAppearanceClassName = 'TListHeaderObjects'
+        FooterAppearanceClassName = 'TListHeaderObjects'
+        Align = Client
+        Size.Width = 370.000000000000000000
+        Size.Height = 436.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        ItemAppearance.ItemHeight = 64
+        ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+          item
+            AppearanceObjectName = 'Title'
+            AppearanceClassName = 'TTextObjectAppearance'
+            Appearance.Font.Size = 16.000000000000000000
+            Appearance.Font.StyleExt = {00070000000000000004000000}
+            Appearance.TextAlign = Leading
+            Appearance.Width = 265.000000000000000000
+            Appearance.Height = 33.000000000000000000
+            Appearance.PlaceOffset.X = 6.000000000000000000
+          end
+          item
+            AppearanceObjectName = 'Category'
+            AppearanceClassName = 'TTextObjectAppearance'
+            Appearance.Font.StyleExt = {00040000000100000004000000}
+            Appearance.TextAlign = Leading
+            Appearance.Width = 255.000000000000000000
+            Appearance.Height = 32.000000000000000000
+            Appearance.PlaceOffset.X = 8.000000000000000000
+            Appearance.PlaceOffset.Y = 32.000000000000000000
+          end
+          item
+            AppearanceObjectName = 'More'
+            AppearanceClassName = 'TAccessoryObjectAppearance'
+            Appearance.Width = 64.000000000000000000
+            Appearance.Height = 64.000000000000000000
+            Appearance.PlaceOffset.X = 278.000000000000000000
+          end>
+        ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
+          item
+            AppearanceObjectName = 'Text1'
+            AppearanceClassName = 'TTextObjectAppearance'
+          end>
+        OnItemClick = lstvwToDosItemClick
+        OnDeleteItem = lstvwToDosDeleteItem
+      end
+    end
+    object tbiEdit: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 11.000000000000000000
+      Size.Height = 11.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'tbiEdit'
+      ExplicitSize.cx = 11.000000000000000000
+      ExplicitSize.cy = 11.000000000000000000
+      object ToolBar2: TToolBar
+        Size.Width = 370.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object spdbtnBack: TSpeedButton
+          Action = ctaList
+          Align = Left
+          Enabled = True
+          ImageIndex = -1
+          Size.Width = 44.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'arrowlefttoolbutton'
+        end
+        object lblToDoEdit: TLabel
+          Position.X = 44.000000000000000000
+          Size.Width = 197.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'toollabel'
+          Text = 'To-Do Edit'
+          TabOrder = 2
+        end
+        object spdbtnSave: TSpeedButton
+          Action = actSave
+          Align = Right
+          Enabled = True
+          ImageIndex = -1
+          Position.X = 326.000000000000000000
+          Size.Width = 44.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'composetoolbutton'
+        end
+        object spdbtnDelete: TSpeedButton
+          Action = actDelete
+          Align = Right
+          Enabled = True
+          ImageIndex = -1
+          Position.X = 282.000000000000000000
+          Size.Width = 44.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'trashtoolbutton'
+        end
+      end
+      object edtTitle: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akTop, akRight]
+        TabOrder = 2
+        Position.X = 16.000000000000000000
+        Position.Y = 88.000000000000000000
+        Size.Width = 340.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        object lblTitle: TLabel
+          Position.Y = -32.000000000000000000
+          Size.Width = 82.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Title'
+          TabOrder = 0
+        end
+      end
+      object edtCategory: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akTop, akRight]
+        TabOrder = 1
+        Position.X = 16.000000000000000000
+        Position.Y = 160.000000000000000000
+        Size.Width = 340.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        object lblCategory: TLabel
+          Position.Y = -32.000000000000000000
+          Size.Width = 82.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Category'
+          TabOrder = 0
+        end
+      end
+    end
+  end
+  object ActionList1: TActionList
+    Left = 96
+    Top = 312
+    object ctaList: TChangeTabAction
+      Category = 'Tab'
+      Tab = tbiList
+    end
+    object ctaEdit: TChangeTabAction
+      Category = 'Tab'
+      Tab = tbiEdit
+    end
+    object actAdd: TAction
+      Category = 'Tab'
+      Text = 'Add'
+      OnExecute = actAddExecute
+    end
+    object actDelete: TAction
+      Category = 'Tab'
+      Text = 'Delete'
+      OnExecute = actDeleteExecute
+    end
+    object actSave: TAction
+      Category = 'Tab'
+      Text = 'Save'
+      OnExecute = actSaveExecute
+    end
+  end
+end

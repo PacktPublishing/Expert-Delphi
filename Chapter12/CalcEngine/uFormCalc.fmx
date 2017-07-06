@@ -1,0 +1,50 @@
+object FormCalc: TFormCalc
+  Left = 0
+  Top = 0
+  Caption = 'Delphi Calculation Engine'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 2
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 1
+    Text = '2'
+    Position.X = 16.000000000000000000
+    Position.Y = 24.000000000000000000
+    Size.Width = 57.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Button1: TButton
+    Position.X = 88.000000000000000000
+    Position.Y = 24.000000000000000000
+    Size.Width = 49.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = '+'
+    OnClick = Button1Click
+  end
+  object Edit2: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 0
+    Text = '2'
+    Position.X = 144.000000000000000000
+    Position.Y = 24.000000000000000000
+    Size.Width = 57.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Label1: TLabel
+    Position.X = 216.000000000000000000
+    Position.Y = 24.000000000000000000
+    Size.Width = 82.000000000000000000
+    Size.Height = 31.000000000000000000
+    Size.PlatformDefault = False
+    Text = '= ?'
+    TabOrder = 3
+  end
+end

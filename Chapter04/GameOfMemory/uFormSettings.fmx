@@ -1,0 +1,108 @@
+object FormSettings: TFormSettings
+  Left = 0
+  Top = 0
+  Caption = 'Game of Memory - Settings'
+  ClientHeight = 480
+  ClientWidth = 351
+  Position = OwnerFormCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 2
+  object ToolBar1: TToolBar
+    Size.Width = 351.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object spdbtnBack: TSpeedButton
+      Align = Left
+      Size.Width = 44.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'arrowlefttoolbutton'
+      Text = 'spdbtnBack'
+      OnClick = spdbtnBackClick
+    end
+    object Label1: TLabel
+      Align = Client
+      Size.Width = 188.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Top Scores'
+    end
+    object btnClear: TButton
+      Align = Right
+      Position.X = 232.000000000000000000
+      Size.Width = 119.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Clear All'
+      OnClick = btnClearClick
+    end
+  end
+  object lstbxTopScores: TListBox
+    Align = Client
+    Margins.Left = 8.000000000000000000
+    Margins.Top = 8.000000000000000000
+    Margins.Right = 8.000000000000000000
+    Margins.Bottom = 8.000000000000000000
+    Size.Width = 335.000000000000000000
+    Size.Height = 420.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 335.000000000000000000
+    Viewport.Height = 420.000000000000000000
+    object lbi04: TListBoxItem
+      StyleLookup = 'listboxitemrightdetail'
+      TabOrder = 7
+      Text = '4 Pairs'
+    end
+    object lbi06: TListBoxItem
+      Position.Y = 44.000000000000000000
+      StyleLookup = 'listboxitemrightdetail'
+      TabOrder = 6
+      Text = '6 Pairs'
+    end
+    object lbi08: TListBoxItem
+      Position.Y = 88.000000000000000000
+      StyleLookup = 'listboxitemrightdetail'
+      TabOrder = 5
+      Text = '8 Pairs'
+    end
+    object lbi10: TListBoxItem
+      Position.Y = 132.000000000000000000
+      StyleLookup = 'listboxitemrightdetail'
+      TabOrder = 4
+      Text = '10 Pairs'
+    end
+    object lbi12: TListBoxItem
+      Position.Y = 176.000000000000000000
+      StyleLookup = 'listboxitemrightdetail'
+      TabOrder = 3
+      Text = '12 Pairs'
+    end
+    object lbi14: TListBoxItem
+      Position.Y = 220.000000000000000000
+      StyleLookup = 'listboxitemrightdetail'
+      TabOrder = 2
+      Text = '14 Pairs'
+    end
+    object lbi16: TListBoxItem
+      Position.Y = 264.000000000000000000
+      StyleLookup = 'listboxitemrightdetail'
+      TabOrder = 1
+      Text = '16 Pairs'
+    end
+    object lbi18: TListBoxItem
+      Position.Y = 308.000000000000000000
+      StyleLookup = 'listboxitemrightdetail'
+      TabOrder = 0
+      Text = '18 Pairs'
+    end
+  end
+end

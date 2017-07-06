@@ -1,0 +1,134 @@
+object FormArrows3D: TFormArrows3D
+  Left = 0
+  Top = 0
+  Caption = 'Arrows 3D'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  Touch.InteractiveGestures = [Zoom]
+  OnGesture = FormGesture
+  DesignerMasterStyle = 0
+  object Viewport3D1: TViewport3D
+    Align = Client
+    Camera = CameraZ
+    Size.Width = 640.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    UsingDesignCamera = False
+    OnMouseDown = Viewport3D1MouseDown
+    OnMouseMove = Viewport3D1MouseMove
+    OnMouseWheel = Viewport3D1MouseWheel
+    object DummyCamera: TDummy
+      Width = 1.000000000000000000
+      Height = 1.000000000000000000
+      Depth = 1.000000000000000000
+      object CameraZ: TCamera
+        AngleOfView = 45.000000000000000000
+        Position.Z = -10.000000000000000000
+        Width = 1.000000000000000000
+        Height = 1.000000000000000000
+        Depth = 1.000000000000000000
+        object LightCamera: TLight
+          Color = claWhite
+          LightType = Directional
+          SpotCutOff = 180.000000000000000000
+          Width = 1.000000000000000000
+          Height = 1.000000000000000000
+          Depth = 1.000000000000000000
+        end
+      end
+    end
+    object DummyScene: TDummy
+      Scale.X = 2.000000000000000000
+      Scale.Y = 2.000000000000000000
+      Scale.Z = 2.000000000000000000
+      Width = 1.000000000000000000
+      Height = 1.000000000000000000
+      Depth = 1.000000000000000000
+      object CylX: TCylinder
+        RotationAngle.Z = 270.000000000000000000
+        Width = 0.100000001490116100
+        Height = 4.000000000000000000
+        Depth = 0.100000001490116100
+        SubdivisionsCap = 2
+        MaterialSource = MaterialSourceX
+        Quanternion = '(0,0,-0.707106828689575,0.707106709480286)'
+        object ConeX: TCone
+          Position.Y = 2.000000000000000000
+          RotationAngle.X = 180.000000000000000000
+          Width = 0.300000011920929000
+          Height = 0.500000000000000000
+          Depth = 0.300000011920929000
+          SubdivisionsCap = 3
+          MaterialSource = MaterialSourceX
+          Quanternion = '(1,0,0,-4.37113882867379E-8)'
+        end
+      end
+      object CylY: TCylinder
+        Width = 0.100000001490116100
+        Height = 4.000000000000000000
+        Depth = 0.100000001490116100
+        SubdivisionsCap = 2
+        MaterialSource = MaterialSourceY
+        object ConeY: TCone
+          Position.Y = 2.000000000000000000
+          RotationAngle.X = 180.000000000000000000
+          Width = 0.200000002980232200
+          Height = 0.500000000000000000
+          Depth = 0.200000002980232200
+          SubdivisionsCap = 3
+          MaterialSource = MaterialSourceY
+          Quanternion = '(1,0,0,-4.37113882867379E-8)'
+        end
+      end
+      object CylZ: TCylinder
+        RotationAngle.X = 90.000000000000000000
+        Width = 0.100000001490116100
+        Height = 4.000000000000000000
+        Depth = 0.100000001490116100
+        SubdivisionsCap = 2
+        MaterialSource = MaterialSourceZ
+        Quanternion = '(0.70710676908493,0,0,0.70710676908493)'
+        object ConeZ: TCone
+          Position.Y = 2.000000000000000000
+          RotationAngle.X = 180.000000000000000000
+          Width = 0.200000002980232200
+          Height = 0.500000000000000000
+          Depth = 0.200000002980232200
+          SubdivisionsCap = 3
+          MaterialSource = MaterialSourceZ
+          Quanternion = '(1,0,0,-4.37113882867379E-8)'
+        end
+      end
+    end
+    object MaterialSourceZ: TLightMaterialSource
+      Diffuse = claBlue
+      Ambient = xFF202020
+      Emissive = claNull
+      Specular = xFF606060
+      Shininess = 30
+      Left = 64
+      Top = 248
+    end
+    object MaterialSourceY: TLightMaterialSource
+      Diffuse = claGreen
+      Ambient = xFF202020
+      Emissive = claNull
+      Specular = xFF606060
+      Shininess = 30
+      Left = 64
+      Top = 184
+    end
+    object MaterialSourceX: TLightMaterialSource
+      Diffuse = claRed
+      Ambient = xFF202020
+      Emissive = claNull
+      Specular = xFF606060
+      Shininess = 30
+      Left = 56
+      Top = 112
+    end
+  end
+end

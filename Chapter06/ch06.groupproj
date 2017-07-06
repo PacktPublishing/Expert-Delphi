@@ -1,0 +1,108 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{301053B4-E8F8-4260-95DF-A2528F997350}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="StylesTest1\StylesTest1.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="StylesTest2\StylesTest2.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="StylesTest3\StylesTest3.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="StylesTest4\StylesTest4.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="StylesTest5\StylesTest5.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="StylesTest6\StylesTest6.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ContactsApp\Contacts.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="StylesTest1">
+        <MSBuild Projects="StylesTest1\StylesTest1.dproj"/>
+    </Target>
+    <Target Name="StylesTest1:Clean">
+        <MSBuild Projects="StylesTest1\StylesTest1.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="StylesTest1:Make">
+        <MSBuild Projects="StylesTest1\StylesTest1.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="StylesTest2">
+        <MSBuild Projects="StylesTest2\StylesTest2.dproj"/>
+    </Target>
+    <Target Name="StylesTest2:Clean">
+        <MSBuild Projects="StylesTest2\StylesTest2.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="StylesTest2:Make">
+        <MSBuild Projects="StylesTest2\StylesTest2.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="StylesTest3">
+        <MSBuild Projects="StylesTest3\StylesTest3.dproj"/>
+    </Target>
+    <Target Name="StylesTest3:Clean">
+        <MSBuild Projects="StylesTest3\StylesTest3.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="StylesTest3:Make">
+        <MSBuild Projects="StylesTest3\StylesTest3.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="StylesTest4">
+        <MSBuild Projects="StylesTest4\StylesTest4.dproj"/>
+    </Target>
+    <Target Name="StylesTest4:Clean">
+        <MSBuild Projects="StylesTest4\StylesTest4.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="StylesTest4:Make">
+        <MSBuild Projects="StylesTest4\StylesTest4.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="StylesTest5">
+        <MSBuild Projects="StylesTest5\StylesTest5.dproj"/>
+    </Target>
+    <Target Name="StylesTest5:Clean">
+        <MSBuild Projects="StylesTest5\StylesTest5.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="StylesTest5:Make">
+        <MSBuild Projects="StylesTest5\StylesTest5.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="StylesTest6">
+        <MSBuild Projects="StylesTest6\StylesTest6.dproj"/>
+    </Target>
+    <Target Name="StylesTest6:Clean">
+        <MSBuild Projects="StylesTest6\StylesTest6.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="StylesTest6:Make">
+        <MSBuild Projects="StylesTest6\StylesTest6.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Contacts">
+        <MSBuild Projects="ContactsApp\Contacts.dproj"/>
+    </Target>
+    <Target Name="Contacts:Clean">
+        <MSBuild Projects="ContactsApp\Contacts.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Contacts:Make">
+        <MSBuild Projects="ContactsApp\Contacts.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="StylesTest1;StylesTest2;StylesTest3;StylesTest4;StylesTest5;StylesTest6;Contacts"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="StylesTest1:Clean;StylesTest2:Clean;StylesTest3:Clean;StylesTest4:Clean;StylesTest5:Clean;StylesTest6:Clean;Contacts:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="StylesTest1:Make;StylesTest2:Make;StylesTest3:Make;StylesTest4:Make;StylesTest5:Make;StylesTest6:Make;Contacts:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
