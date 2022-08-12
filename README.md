@@ -28,5 +28,8 @@ The Delphi IDE is a Windows program, so you will need a physical or virtual Wind
 
 * [Delphi Cookbook - Second Edition](https://www.packtpub.com/application-development/delphi-cookbook-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781785287428)
 
+## Errata 
+ * Page 329 (line 9):  **GetData.ToDoCreate(todo)** _should be_ **GetToDoData.ToDoCreate(todo);**
+ 
 ### Suggestions and Feedback
 [Click here](https://docs.google.com/forms/d/e/1FAIpQLSe5qwunkGf6PUvzPirPDtuy1Du5Rlzew23UBp2S-P3wB-GcwQ/viewform) if you have any feedback or suggestions.
